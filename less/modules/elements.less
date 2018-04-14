@@ -1,0 +1,123 @@
+.defaultCheckbox{
+	&.m--defaultCheckbox-withPadding{
+		display: inline-block;
+		margin-top:  25px;
+		margin-bottom: 25px;
+	}
+}
+
+
+.checkbox {
+	display: none;
+}
+
+.checkbox-custom {
+	position: relative;     
+	width: 8px;            
+	height: 8px;           
+	border: 2px solid #666666;
+
+	
+}
+
+.checkbox-custom{
+	display: inline-block;
+	vertical-align: middle;
+	color: #666666;
+	font-family:  @font-family-opensans;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	position: relative;
+	text-indent: 10px;
+}
+
+
+.label {
+	left: 15px;
+	vertical-align: middle;
+	color: #666666;
+	font-family:  @font-family-opensans;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	position: relative;
+	text-indent: 15px;
+}
+.checkbox:checked + .checkbox-custom::before {
+	content: "";            
+	display: block;			
+	position: absolute;     
+	
+	content: "\2714";
+	top: -4px;
+	left:-10px;
+	 opacity: 1; 
+    transform: scale(1) rotateZ(0deg); 
+    
+    transition: all 0.5s ease;
+   
+	    
+font-family:  @font-family-opensans;
+	    font-size: 9px;
+		font-weight: 700;
+	    color: #666666;
+
+	    text-align: center;
+
+	   
+}
+
+
+
+
+.form{
+	&__inputElementGroup{
+		margin-top: 15px;
+		width: ~" calc(100% - 25px)";
+		
+	}
+
+	&__inputElement {
+	    position: relative;
+	    overflow: hidden;
+	    width: 100%;
+	    height: 60px;
+	    margin-bottom: 20px;
+	    border: 3px solid #eaeaea;
+		background-color: #ffffff;
+
+		
+	}
+
+	&__inputField {
+	    width: calc(100% - 5px);
+	    height: 100%;
+	    padding: 10px 0 0 25px;
+	    position: absolute;
+	    bottom: 0;
+	    border: none;
+	   color: #333333;
+		font-family: @font-family-opensans;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+	    border-radius: 0;
+	}
+
+	&__inputLabel {
+	    position: absolute;
+	    top: 50%;
+	    padding-left: 25px;
+	    pointer-events: none;
+	    color: #adadad;
+		font-family: @font-family-opensans;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 22px;
+	    cursor: text;
+	    transform: translateY(-50%);
+	    transition: transform .2s ease-out,top .2s ease-out,font-size .2s ease-out;
+	}
+}
+
