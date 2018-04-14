@@ -1,3 +1,33 @@
+.defaultButton{
+
+	border: 3px solid #adadad;
+	display: inline-block;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	box-sizing: border-box;
+	color: #000000;
+	font-family:  @font-family-opensans;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 22px;
+	user-select: none;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover{
+		border: 3px solid #dd432b;
+		color: #dd432b;
+	}
+	&.m--defaultButton-withMargin{
+		margin-top: 25px;
+		margin-bottom: 30px;
+	}
+}
+
+
+
 .closeButton{
 	position: absolute;
 	right: 0px;
@@ -7,7 +37,20 @@
 	background-color: rgba(0, 0, 0, 0.2);
 	cursor: pointer;
 	z-index: 100;
-	
+
+	&:hover{
+		&.closeButton:before{
+		
+		background-color: #dd432b;
+		
+	}
+
+		&.closeButton:after{
+			
+			background-color:#dd432b;
+			
+		}
+	}
 
 	&:before{
 		position: absolute;
@@ -18,6 +61,7 @@
 		width: 2px;
 		background-color: #ffffff;
 		transform: rotate(45deg);
+		transition: all 0.3s;
 	}
 
 	&:after{
@@ -29,6 +73,7 @@
 		width: 2px;
 		background-color: #ffffff;
 		transform: rotate(-45deg);
+		transition: all 0.3s;
 	}
 }
 

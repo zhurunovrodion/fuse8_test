@@ -1,5 +1,49 @@
 .formBlock{
-	&__annotation{
-		
+	&__about{
+		color: #333333;
+		font-family: @font-family-opensans;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 26px;
+
+		&.m--formBlock__about-paddingBottom{
+			padding-bottom: 5px;
+		}
+	}
+
+	&__subHeader{
+		color: #000000;
+		font-family:  @font-family-opensans;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 20px;
+	}
+
+	&__footNote{
+		color: #666666;
+		font-family:  @font-family-opensans;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 18px;
+	}
+}
+
+
+
+@media (max-width: 550px){
+	.formBlock{
+		&__about{
+			
+
+			&.m--formBlock__about-paddingBottom{
+			
+			}
+		}
+
+		&__subHeader{
+			
+			font-size: 20px;
+			
+		}
 	}
 }

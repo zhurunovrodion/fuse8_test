@@ -3676,10 +3676,9 @@ em {
 }
 
 .modal__formBlock {
-  outline: 1px solid blue;
   margin: 0 auto;
   width: calc(100% - 80px);
-  height: 500px;
+  height: auto;
   position: absolute;
   top: -90px;
   margin-bottom: 40px;
@@ -3702,6 +3701,39 @@ em {
   background: rgba(0, 0, 0, 0.9);
 }
 
+.defaultButton {
+  border: 3px solid #adadad;
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: 'Open Sans', Open Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.defaultButton:hover {
+  border: 3px solid #dd432b;
+  color: #dd432b;
+}
+
+.defaultButton.m--defaultButton-withMargin {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
 .closeButton {
   position: absolute;
   right: 0px;
@@ -3711,6 +3743,14 @@ em {
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 100;
+}
+
+.closeButton:hover.closeButton:before {
+  background-color: #dd432b;
+}
+
+.closeButton:hover.closeButton:after {
+  background-color: #dd432b;
 }
 
 .closeButton:before {
@@ -3723,6 +3763,8 @@ em {
   background-color: #ffffff;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .closeButton:after {
@@ -3735,6 +3777,36 @@ em {
   background-color: #ffffff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.formBlock__about {
+  color: #333333;
+  font-family: 'Open Sans', Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.formBlock__about.m--formBlock__about-paddingBottom {
+  padding-bottom: 5px;
+}
+
+.formBlock__subHeader {
+  color: #000000;
+  font-family: 'Open Sans', Open Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.formBlock__footNote {
+  color: #666666;
+  font-family: 'Open Sans', Open Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 @media (max-width: 550px) {
@@ -3763,13 +3835,17 @@ em {
   }
 
   .modal__formBlock {
-    outline: 1px solid blue;
-    margin: 0 auto;
     width: 100%;
-    height: 500px;
-    position: absolute;
     top: 0px;
     margin-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .formBlock__subHeader {
+    font-size: 20px;
   }
 }
 
