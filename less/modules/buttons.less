@@ -1,0 +1,74 @@
+.closeButton{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 42px;
+	height: 42px;
+	background-color: rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	z-index: 100;
+	
+
+	&:before{
+		position: absolute;
+		left: 20px;
+		top: 9px;
+		content: ' ';
+		height: 21px;
+		width: 2px;
+		background-color: #ffffff;
+		transform: rotate(45deg);
+	}
+
+	&:after{
+		position: absolute;
+		left: 20px;
+		top: 9px;
+		content: ' ';
+		height: 21px;
+		width: 2px;
+		background-color: #ffffff;
+		transform: rotate(-45deg);
+	}
+}
+
+
+@media (max-width: 350px){
+	.closeButton{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		width: 32px;
+		height: 32px;
+		background-color: rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+		z-index: 100;
+		
+
+		&:before{
+			position: absolute;
+			left: 15px;
+			top: 9px;
+			content: ' ';
+			height: 16px;
+			width: 2px;
+			background-color: #ffffff;
+			transform: rotate(45deg);
+		}
+
+		&:after{
+			position: absolute;
+			left: 15px;
+			top: 9px;
+			content: ' ';
+			height: 16px;
+			width: 2px;
+			background-color: #ffffff;
+			transform: rotate(-45deg);
+		}
+}
+
+}
+
+
+
