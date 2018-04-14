@@ -1,0 +1,116 @@
+.modal{
+	
+  	display: block;
+	width: 728px;
+	max-width: 100%;
+	min-height: 400px;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	left: 50%;
+	top: 20px;
+	transform: translate(-50%, 4%);
+	
+	
+  &__content{
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-color: #eaeaea;
+		
+	box-sizing: border-box;
+	  overflow: auto;
+  }
+
+  &__substrate{
+  	 
+  	 width: 100%;
+  	 max-height: 318px;
+  	 height: 50vw;
+	 outline: 1px solid red;
+	 background-image:linear-gradient(to right,rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)), url('../images/bgSubstrate.png');
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 padding: 40px;
+	 box-sizing: border-box;
+  }
+
+  &__header{
+  	max-width: 362px;
+	
+	color: #ffffff;
+	font-family: @font-family-opensans;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 46px;
+  }
+
+  &__subHeader{
+  	color: #db4433;
+	font-family:  @font-family-opensans;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 55px;
+	text-transform: uppercase;
+  }
+	&__formWrapper{
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-bottom: 40px;
+		box-sizing: border-box;
+		background-color: #eaeaea;
+		position: relative;
+	}
+  &__formBlock{
+  	 outline: 1px solid blue;
+  	 margin: 0 auto;
+  	 width: 100%;
+  	 height: 700px;
+  	 position: absolute;
+  	 top: -70px;
+  }
+}
+
+
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	background: rgba(0, 0, 0, 0.9);
+}
+
+
+@media (max-width: 500px){
+	.modal{
+	
+  	
+	
+	
+	  &__content{
+		
+	  }
+
+	  &__substrate{
+
+	  	 padding: 15px;
+	  	 padding-top: 30px;
+		 background-image:linear-gradient(to right,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/bgSubstrate.png');
+		 
+	  }
+
+	  &__header{
+	  	font-size: 10vw;
+	  	line-height: 10vw;
+	  }
+
+	  &__subHeader{
+	  		display: none;
+	  }
+	}
+
+}

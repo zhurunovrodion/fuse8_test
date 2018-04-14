@@ -1,0 +1,1 @@
+{"D:\\Sites\\fuse8\\gulpfile.js": {"sha1": "757b4986fb19457b465eb2a443bb686a2cbcdf43", "tasks": {"browser-sync": {"dependencies": "", "name": "browser-sync"}, "watcher": {"dependencies": "", "name": "watcher"}, "default": {"dependencies": "", "name": "default"}, "compileLess": {"dependencies": "", "name": "compileLess"}}}}
