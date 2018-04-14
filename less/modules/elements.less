@@ -74,18 +74,32 @@ font-family:  @font-family-opensans;
 .form{
 	&__inputElementGroup{
 		margin-top: 15px;
-		width: ~" calc(100% - 25px)";
+		display: flex;
+		justify-content: space-between;
+		width: ~"calc(100% - 25px)";
+		
 		
 	}
 
 	&__inputElement {
+		width: ~"calc(100% - 25px)";
 	    position: relative;
 	    overflow: hidden;
-	    width: 100%;
+	   
 	    height: 60px;
 	    margin-bottom: 20px;
 	    border: 3px solid #eaeaea;
 		background-color: #ffffff;
+
+		&.m--form__inputElement-withRightMargin{
+			margin-right: 30px;
+		}
+
+		&.m--form__inputElement__notWide{
+		
+		
+			
+		}
 
 		
 	}
@@ -121,3 +135,74 @@ font-family:  @font-family-opensans;
 	}
 }
 
+
+
+@media (max-width: 500px){
+
+	.form{
+		&__inputElementGroup{
+			margin-top: 15px;
+			
+			
+			flex-direction: column;
+			width: 100%;
+			
+			
+		}
+
+		&__inputElement {
+			width: ~"calc(100% - 25px)";
+		    position: relative;
+		    overflow: hidden;
+		   
+		    height: 60px;
+		    margin-bottom: 20px;
+		    border: 3px solid #eaeaea;
+			background-color: #ffffff;
+
+			&.m--form__inputElement-withRightMargin{
+				margin-right: 0px;
+			}
+
+			&.m--form__inputElement__notWide{
+				
+			
+				
+			}
+
+			
+		}
+
+		&__inputField {
+		    width: calc(100% - 5px);
+		    height: 100%;
+		    padding: 10px 0 0 25px;
+		    position: absolute;
+		    bottom: 0;
+		    border: none;
+		   color: #333333;
+			font-family: @font-family-opensans;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+		    border-radius: 0;
+		}
+
+		&__inputLabel {
+		    position: absolute;
+		    top: 50%;
+		    padding-left: 25px;
+		    pointer-events: none;
+		    color: #adadad;
+			font-family: @font-family-opensans;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 22px;
+		    cursor: text;
+		    transform: translateY(-50%);
+		    transition: transform .2s ease-out,top .2s ease-out,font-size .2s ease-out;
+		}
+	}
+
+
+}

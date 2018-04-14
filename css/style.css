@@ -477,17 +477,27 @@ em {
 
 .form__inputElementGroup {
   margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: calc(100% - 25px);
 }
 
 .form__inputElement {
+  width: calc(100% - 25px);
   position: relative;
   overflow: hidden;
-  width: 100%;
   height: 60px;
   margin-bottom: 20px;
   border: 3px solid #eaeaea;
   background-color: #ffffff;
+}
+
+.form__inputElement.m--form__inputElement-withRightMargin {
+  margin-right: 30px;
 }
 
 .form__inputField {
@@ -575,6 +585,63 @@ em {
   .modal__header {
     font-size: 10vw;
     line-height: 10vw;
+  }
+
+  .form__inputElementGroup {
+    margin-top: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form__inputElement {
+    width: calc(100% - 25px);
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+    margin-bottom: 20px;
+    border: 3px solid #eaeaea;
+    background-color: #ffffff;
+  }
+
+  .form__inputElement.m--form__inputElement-withRightMargin {
+    margin-right: 0px;
+  }
+
+  .form__inputField {
+    width: calc(95%);
+    height: 100%;
+    padding: 10px 0 0 25px;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    color: #333333;
+    font-family: 'Open Sans', Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    border-radius: 0;
+  }
+
+  .form__inputLabel {
+    position: absolute;
+    top: 50%;
+    padding-left: 25px;
+    pointer-events: none;
+    color: #adadad;
+    font-family: 'Open Sans', Open Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    cursor: text;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+    transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+    transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
+    transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
   }
 }
 
