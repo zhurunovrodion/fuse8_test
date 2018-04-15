@@ -7,17 +7,17 @@ class Validator{
 		console.log(form);
 		 let $formElements = $('.js--validateElement', form);
 		 let $submitButton = $('.js--validateSubmitButton .defaultButton', form);
-		 let errorsCounter = '';
+		 let errors= '';
 		 console.log($formElements);
 
 		  $submitButton.on('click', function(){
 
-		  		errorsCounter = proj.validator.validate($formElements);
+		  		errors = proj.validator.validate($formElements);
 
-		  		if(errorsCounter === 0){
-		  			//alert(0);
+		  		if(!errors){
+		  			console.log('form not validate');
 		  		}else{
-		  			//alert(1);
+		  			form.submit();
 		  		}
 
 		  });
@@ -226,7 +226,12 @@ class Validator{
 
 		});
 		console.log('количество ошибок '+ errorsArray);
-		return 0;
+		if(errorsArray>0){
+			return false;
+		}else{
+			return true;
+		}
+		
 	}
 
 	isValidDate(value){
