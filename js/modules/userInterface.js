@@ -99,6 +99,23 @@ class UI{
 	}
 
 
+	openModalWindowInit(){
+		let $openButton = $('.js--openModalWindow');
+		let $closeButton = $('.js--closeModalWindow');
+		let $overlay = $('.overlay');
+		let $modalWindow = $('.modal');
+		$openButton.on('click', function(){
+			$overlay.addClass('animated fadeIn m--overlay-isShowned');
+			$modalWindow.addClass('animated fadeIn m--modal-isShowned');
+		});
+
+		$closeButton.on('click', function(){
+			$overlay.removeClass('m--overlay-isShowned');
+			$modalWindow.removeClass('m--modal-isShowned');
+		});
+	}
+
+
 
 }
 

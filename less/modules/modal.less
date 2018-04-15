@@ -1,3 +1,13 @@
+
+.openModalButton{
+	position: relative;
+	top: 50%;
+	bottom: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
 .modal{
 	
   	display: block;
@@ -10,6 +20,11 @@
 	left: 50%;
 	top: 20px;
 	transform: translate(-50%, 4%);
+	display: none;
+
+	&.m--modal-isShowned{
+		display: block;
+	}
 	
 	
   &__content{
@@ -89,6 +104,11 @@
 	height: 100%;
 	z-index: 50;
 	background: rgba(0, 0, 0, 0.9);
+	display: none;
+
+	&.m--overlay-isShowned{
+		display: block;
+	}
 }
 
 
