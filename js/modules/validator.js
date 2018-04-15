@@ -6,7 +6,7 @@ class Validator{
 	formValidatorInit(form){
 		console.log(form);
 		 let $formElements = $('.js--validateElement', form);
-		 let $submitButton = $('.js--validateSubmitButton', form);
+		 let $submitButton = $('.js--validateSubmitButton .defaultButton', form);
 		 let errorsCounter = '';
 		 console.log($formElements);
 
@@ -21,8 +21,112 @@ class Validator{
 		  		}
 
 		  });
+		  $formElements.each(function() {
+		  		 proj.validator.realtimeValidate($(this));
+		  });
+		  
 		 
 
+	}
+
+	realtimeValidate($validateElement){
+		let errorsArray = 0;
+
+		$validateElement.change(function() {
+			
+			let $inputField = $('.form__inputField', this);
+			let $errorMessage = $('.form__inputErrorMessage', this);
+			let $errorIcon =  $('.form__inputErrorIcon', this);
+			let $successIcon =  $('.form__inputSuccessIcon', this);
+			
+			let validateSettings = '';
+			if($inputField.attr('data-validate')){
+				validateSettings = $inputField.attr('data-validate').split(" ");
+				let fieldErrors = 0;
+
+				for (let setting of validateSettings){
+					if (fieldErrors>0){
+						continue;
+					}
+					switch(setting) {
+					  case 'required': 
+					  
+					   		console.log('проверка пустоты');
+					  		if($inputField.val().trim().length == 0) {
+					  			   if($successIcon.is('.m--inputSuccessIcon-isShowned')){
+					  			   		$successIcon.removeClass('m--inputSuccessIcon-isShowned');
+					  			   } 
+						           $errorIcon.addClass('m--inputErrorIcon-isShowned');
+						           $errorMessage.html('This field is required');
+						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
+						           fieldErrors++;
+						           errorsArray++;
+						          
+						     }else{
+						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
+						     		 $errorIcon.removeClass('m--inputErrorIcon-isShowned');
+						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
+						     	}
+						     	$successIcon.addClass('m--inputSuccessIcon-isShowned');
+						     	  
+						     }
+					   	break; 
+					   case 'email': 
+					  		if(!(/^([a-z0-9_-]+.)*[a-z0-9_-]+@([a-z0-9][a-z0-9-]*[a-z0-9].)+[a-z]{2,4}$/i).test($inputField.val().trim())){
+					  			 if($successIcon.is('.m--inputSuccessIcon-isShowned')){
+					  			   		$successIcon.removeClass('m--inputSuccessIcon-isShowned');
+					  			   } 
+						           $errorIcon.addClass('m--inputErrorIcon-isShowned');
+						           $errorMessage.html('Invalid email format');
+						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
+						           fieldErrors++;
+						           errorsArray++;
+					  		}else{
+						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
+						     		 $errorIcon.removeClass('animated fadeIn m--inputErrorIcon-isShowned');
+						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
+						     	}
+						     	$successIcon.addClass('animated fadeIn m--inputSuccessIcon-isShowned');
+						     
+						     }
+
+					   		console.log('проверка почты');
+					  		console.log('2');
+					   	break;
+					   	case 'date': 
+					  		if(!proj.validator.isValidDate($inputField.val().trim())){
+					  			 if($successIcon.is('.m--inputSuccessIcon-isShowned')){
+					  			   		$successIcon.removeClass('animated fadeIn m--inputSuccessIcon-isShowned');
+					  			   } 
+						           $errorIcon.addClass('animated fadeIn m--inputErrorIcon-isShowned');
+						           $errorMessage.html('Invalid date format');
+						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
+						           fieldErrors++;
+						           errorsArray++;
+					  		}else{
+						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
+						     		 $errorIcon.removeClass('animated fadeIn m--inputErrorIcon-isShowned');
+						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
+						     	}
+						     	$successIcon.addClass('animated fadeIn m--inputSuccessIcon-isShowned');
+						     	
+						     }
+					   		console.log('проверка даты');
+					   		console.log('2');
+					   	break;
+
+					   
+
+					
+					}	
+				}
+			}
+			
+			
+
+		});
+		console.log('количество ошибок '+ errorsArray);
+		return 0;
 	}
 
 	validate($validateElements){
@@ -56,6 +160,7 @@ class Validator{
 						           $errorMessage.html('This field is required');
 						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
 						           fieldErrors++;
+						           errorsArray++;
 						          
 						     }else{
 						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
@@ -63,6 +168,7 @@ class Validator{
 						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
 						     	}
 						     	$successIcon.addClass('m--inputSuccessIcon-isShowned');
+						     	  
 						     }
 					   	break; 
 					   case 'email': 
@@ -74,12 +180,14 @@ class Validator{
 						           $errorMessage.html('Invalid email format');
 						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
 						           fieldErrors++;
+						           errorsArray++;
 					  		}else{
 						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
 						     		 $errorIcon.removeClass('animated fadeIn m--inputErrorIcon-isShowned');
 						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
 						     	}
 						     	$successIcon.addClass('animated fadeIn m--inputSuccessIcon-isShowned');
+						     
 						     }
 
 					   		console.log('проверка почты');
@@ -94,12 +202,14 @@ class Validator{
 						           $errorMessage.html('Invalid date format');
 						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
 						           fieldErrors++;
+						           errorsArray++;
 					  		}else{
 						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
 						     		 $errorIcon.removeClass('animated fadeIn m--inputErrorIcon-isShowned');
 						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
 						     	}
 						     	$successIcon.addClass('animated fadeIn m--inputSuccessIcon-isShowned');
+						     	
 						     }
 					   		console.log('проверка даты');
 					   		console.log('2');
@@ -115,6 +225,7 @@ class Validator{
 			
 
 		});
+		console.log('количество ошибок '+ errorsArray);
 		return 0;
 	}
 
