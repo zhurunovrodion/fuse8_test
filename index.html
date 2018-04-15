@@ -7,8 +7,13 @@
     <link rel="SHORTCUT ICON" href="images/fav.png" type="image/png">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    
     <script src="js/proj.js"></script>
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/jqueryMigrate.js"></script>
+    <script src="js/libs/jqueryEasing.js"></script>
+    <script src="js/modules/userInterface.js"></script>
+    <script src="js/modules/validator.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -45,7 +50,7 @@
                                         <option value="2">Залог недвижимости</option>
                                         <option value="3">Залог бизнеса</option>                        
                                     </select>
-                                    <label for="name" class="form__selectLabel">I am an
+                                    <label for="name" class="form__selectLabel ">I am an
                                        
                                     </label>
                                     
@@ -75,7 +80,7 @@
                          </div>
                          
 
-                          <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin m--form__inputElementWrapper-halfWidth">
+                          <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin m--form__inputElementWrapper-halfWidth js--labelFocusSlide">
                                 <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide" >
                                       <input id="name" name="name" class="form__inputField m--form__inputField-withBgArrow" type="text"> 
                                     <label for="name" class="form__inputLabel">Date
@@ -90,10 +95,10 @@
                          </div>   
 
                         <div class="form__inputElementGroup m--form__inputElementGroup__notWide">
-                            <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin">
+                            <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin js--labelFocusSlide">
                                 <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide" >
                                     <input id="name" name="name" class="form__inputField" type="email"> 
-                                    <label for="name" class="form__inputLabel">First Name
+                                    <label for="name" class="form__inputLabel ">First Name
                                         <abbr title="required">*</abbr>
                                     </label>
                                     
@@ -103,7 +108,7 @@
                                    <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
                             </div>
 
-                            <div class="form__inputElementWrapper">
+                            <div class="form__inputElementWrapper js--labelFocusSlide">
                                    <div class="form__inputElement m--form__inputElement-lastName m--form__inputElement__notWide" >
                                         <input id="name" name="name" class="form__inputField" type="email"> 
                                         <label for="name" class="form__inputLabel">Last Name
@@ -121,7 +126,7 @@
                             
                         </div>
                    
-                            <div class="form__inputElementWrapper">
+                            <div class="form__inputElementWrapper js--labelFocusSlide">
                                  <div class="form__inputElement m--form__inputElement-email" >
                                     <input id="name" name="name" class="form__inputField" type="email"> 
                                     <label for="name" class="form__inputLabel">Email Address

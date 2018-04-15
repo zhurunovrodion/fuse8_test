@@ -545,6 +545,7 @@ em {
 .form__inputLabel {
   position: absolute;
   top: 50%;
+  left: 0px;
   padding-left: 25px;
   pointer-events: none;
   color: #adadad;
@@ -561,6 +562,11 @@ em {
   -o-transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
+.form__inputLabel.m--form__inputLabel-slideUp {
+  top: 27%;
+  font-size: 12px;
 }
 
 .form__selectField {
@@ -588,6 +594,7 @@ em {
 }
 
 .form__selectLabel {
+  left: 0px;
   font-size: 12px;
   font-weight: 400;
   line-height: 22px;
