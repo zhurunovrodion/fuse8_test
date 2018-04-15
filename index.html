@@ -4,17 +4,18 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Modal Form</title>
-    <link rel="SHORTCUT ICON" href="images/fav.png" type="image/png">
+   
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="js/libs/device.js"></script>
-    <script src="js/proj.js"></script>
+    
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/jqueryMigrate.js"></script>
     <script src="js/libs/jqueryEasing.js"></script>
     <script src="js/libs/datepicker.js"></script>
     <script src="js/modules/userInterface.js"></script>
     <script src="js/modules/validator.js"></script>
+    <script src="js/proj.js"></script>
     <script src="js/main.js"></script>
 </head>
 
@@ -35,7 +36,7 @@
                 </div>
             </div>
             <div class="modal__formWrapper">
-                 <form class="modal__formBlock formBlock form">
+                 <form class="modal__formBlock formBlock form js--formValidate">
                     <div class="formBlock__about m--formBlock__about-paddingBottom">
                         Open Days are the perfect opportunity to get to know us, visit our campus, see acccommodation, meet academics, and get the low-down on the Essex student life.
 
@@ -45,13 +46,13 @@
                     </div>
                          <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin">
                                 <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide" >
-                                    <select name="version_pledge" class="form__selectField" id="calc_region_1">
+                                    <select name="role" class="form__selectField" id="calc_region_1">
                                         <option value="">Select education</option>
                                         <option value="1">Залог автомобиля</option>
                                         <option value="2">Залог недвижимости</option>
                                         <option value="3">Залог бизнеса</option>                        
                                     </select>
-                                    <label for="name" class="form__selectLabel ">I am an
+                                    <label for="role" class="form__selectLabel ">I am an
                                        
                                     </label>
                                     
@@ -63,13 +64,13 @@
                          </div>
                           <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin">
                                 <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide" >
-                                    <select name="version_pledge" class="form__selectField" id="calc_region_1">
+                                    <select name="campus" class="form__selectField" id="calc_region_1">
                                         <option value="">Colchester Campus</option>
-                                        <option value="1">Залог автомобиля</option>
-                                        <option value="2">Залог недвижимости</option>
-                                        <option value="3">Залог бизнеса</option>                        
+                                        <option value="1">value 1</option>
+                                        <option value="2">value 2</option>
+                                        <option value="3">value 3</option>                        
                                     </select>
-                                    <label for="name" class="form__selectLabel">Campus
+                                    <label for="campus" class="form__selectLabel">Campus
                                        
                                     </label>
                                     
@@ -81,10 +82,10 @@
                          </div>
                          
 
-                          <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin m--form__inputElementWrapper-halfWidth js--labelFocusSlide">
+                          <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin m--form__inputElementWrapper-halfWidth js--labelFocusSlide js--validateElement">
                                 <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide" >
-                                      <input id="name" name="name" class="form__inputField m--form__inputField-withBgArrow js--datepickerInit" type="text"> 
-                                    <label for="name" class="form__inputLabel">Date
+                                      <input id="date" name="date" class="form__inputField m--form__inputField-withBgArrow js--datepickerInit" data-validate="required date" type="text"> 
+                                    <label for="date" class="form__inputLabel">Date
                                         <abbr title="required">*</abbr>
                                     </label>
                                     
@@ -95,11 +96,11 @@
                                      <div class="form__inputDownArrow"><img src="images/icon-arrow-down.png"></div>
                          </div>   
 
-                        <div class="form__inputElementGroup m--form__inputElementGroup__notWide">
-                            <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin js--labelFocusSlide">
+                        <div class="form__inputElementGroup m--form__inputElementGroup__notWide ">
+                            <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin js--labelFocusSlide js--validateElement">
                                 <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide" >
-                                    <input id="name" name="name" class="form__inputField" type="email"> 
-                                    <label for="name" class="form__inputLabel ">First Name
+                                    <input id="firstName" name="firstName" class="form__inputField js--validateInput-required" type="email"> 
+                                    <label for="firstName" class="form__inputLabel ">First Name
                                         <abbr title="required">*</abbr>
                                     </label>
                                     
@@ -109,10 +110,10 @@
                                    <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
                             </div>
 
-                            <div class="form__inputElementWrapper js--labelFocusSlide">
+                            <div class="form__inputElementWrapper js--labelFocusSlide js--validateElement">
                                    <div class="form__inputElement m--form__inputElement-lastName m--form__inputElement__notWide" >
-                                        <input id="name" name="name" class="form__inputField" type="email"> 
-                                        <label for="name" class="form__inputLabel">Last Name
+                                        <input id="lastName" name="lastName" class="form__inputField" type="email"> 
+                                        <label for="lastName" class="form__inputLabel">Last Name
                                             <abbr title="required">*</abbr>
                                         </label>
                                        
@@ -127,10 +128,10 @@
                             
                         </div>
                    
-                            <div class="form__inputElementWrapper js--labelFocusSlide">
+                            <div class="form__inputElementWrapper js--labelFocusSlide js--validateElement">
                                  <div class="form__inputElement m--form__inputElement-email" >
-                                    <input id="name" name="name" class="form__inputField" type="email"> 
-                                    <label for="name" class="form__inputLabel">Email Address
+                                    <input id="email" name="email" class="form__inputField" data-validate="required email" type="email"> 
+                                    <label for="email" class="form__inputLabel">Email Address
                                         <abbr title="required">*</abbr>
                                     </label>
                                 </div>
@@ -146,14 +147,14 @@
                             
                        
                    
-                    <div class="formBlock__compliance">
+                    <div class="formBlock__compliance js--validateElement">
                         <label class="defaultCheckbox m--defaultCheckbox-withPadding">
                             <input class="checkbox" type="checkbox" name="checkbox-test">
                             <span class="checkbox-custom"></span>
                             <span class="label">I would like to receive email updates from the University</span>
                         </label>
                     </div>
-                    <div class="formBlock__submitButton">
+                    <div class="formBlock__submitButton js--validateSubmitButton">
                         <div class="defaultButton m--defaultButton-withMargin">
                             Make A Booking
                         </div>

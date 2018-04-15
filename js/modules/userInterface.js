@@ -14,7 +14,7 @@ class UI{
 	               
 	              	$inputField.on('ifEmpty', function(){
 							
-							     if($.trim(this.value).length!=0) { // zero-length string AFTER a trim
+							     if($.trim(this.value).length!=0) { 
 					     	
 					            $inputLabel.addClass('m--form__inputLabel-slideUp');
 					           
@@ -49,7 +49,7 @@ class UI{
 						          
 						     }
 
-						     if($.trim(this.value).length) { 
+						     if($.trim(this.value).length!=0) { 
 						            $inputLabel.addClass('m--form__inputLabel-slideUp');
 						           
 						          
@@ -103,4 +103,3 @@ class UI{
 }
 
 
-proj.ui = new UI();

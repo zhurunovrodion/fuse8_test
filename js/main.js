@@ -10,7 +10,7 @@ function initialize(){
 		}catch(e){
 			
 		}
-		
+		proj.validator.formValidatorInit($('.js--formValidate'));
 		
 }
 
