@@ -11,7 +11,7 @@ class UI{
 	               let $inputField = $('.form__inputField', inputWrapper);
 	               let $inputLabel = $('.form__inputLabel', inputWrapper);
 	              
-
+	               
 	              	$inputField.on('ifEmpty', function(){
 							
 							     if($.trim(this.value).length!=0) { // zero-length string AFTER a trim
@@ -19,6 +19,7 @@ class UI{
 					            $inputLabel.addClass('m--form__inputLabel-slideUp');
 					           
 						     }
+						     	
 					});
 
 					$inputField.keydown(function(){
@@ -47,7 +48,18 @@ class UI{
 						           
 						          
 						     }
+
+						     if($.trim(this.value).length) { 
+						            $inputLabel.addClass('m--form__inputLabel-slideUp');
+						           
+						          
+						     }
+
+
+						     
 					});
+
+
 	     });
 	}
 
@@ -64,11 +76,23 @@ class UI{
 			    timeFormat: 'hh:ii',
 			    firstDay: 1
 			};
+
+			 let $deviceType= $('html');
+                console.log($deviceType);
+              
+                if(!$deviceType.is('.desktop')){
+                	
+                	
+                	inputWithDatepicker.attr('type','date');
+                	
+                } else{
+                	inputWithDatepicker.datepicker({
+						dateFormat: 'yyyy-mm-dd',
+						language: 'eng'
+					});
+                }
+
 			
-			inputWithDatepicker.datepicker({
-					dateFormat: 'yyyy-mm-dd',
-					language: 'eng'
-				});
 			
 
 			
