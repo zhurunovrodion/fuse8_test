@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Modal Form</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="build/css/c/style.css" type="text/css" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   
+   <script type="text/javascript" src="build/js/c/c.js"></script> 
+</head>
+
+<body>
+    <div class="openModalButton">
+        <div class="defaultButton m--defaultButton-big js--openModalWindow"> Open Modal </div>
+    </div>
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__closeButton js--closeModalWindow"> <span class="closeButton"></span> </div>
+            <div class="modal__substrate">
+                <div class="modal__subHeader"> Come and say hello </div>
+                <div class="modal__header"> Register for an Open Day </div>
+            </div>
+            <div class="modal__formWrapper">
+                <form class="modal__formBlock formBlock form js--formValidate">
+                    <div class="formBlock__about m--formBlock__about-paddingBottom"> Open Days are the perfect opportunity to get to know us, visit our campus, see acccommodation, meet academics, and get the low-down on the Essex student life. </div>
+                    <div class="formBlock__subHeader"> Book your place </div>
+                    <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin">
+                        <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide">
+                            <select name="role" class="form__selectField" id="calc_region_1">
+                                <option value="">Select education</option>
+                                <option value="1">Physics</option>
+                                <option value="2">Biology </option>
+                                <option value="3">Earth Science</option>
+                            </select>
+                            <label for="role" class="form__selectLabel ">I am an </label>
+                        </div>
+                        <div class="form__inputErrorMessage"></div>
+                        <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
+                        <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
+                        <div class="form__inputDownArrow"><img src="images/icon-arrow-down.png"></div>
+                    </div>
+                    <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin">
+                        <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide">
+                            <select name="campus" class="form__selectField" id="calc_region_1">
+                                <option value="">Colchester Campus</option>
+                                <option value="1">value 1</option>
+                                <option value="2">value 2</option>
+                                <option value="3">value 3</option>
+                            </select>
+                            <label for="campus" class="form__selectLabel">Campus </label>
+                        </div>
+                        <div class="form__inputErrorMessage"></div>
+                        <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
+                        <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
+                        <div class="form__inputDownArrow"><img src="images/icon-arrow-down.png"></div>
+                    </div>
+                    <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin m--form__inputElementWrapper-halfWidth js--labelFocusSlide js--validateElement">
+                        <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide">
+                            <input id="date" name="date" class="form__inputField m--form__inputField-withBgArrow js--datepickerInit" data-validate="required date" type="text">
+                            <label for="date" class="form__inputLabel">Date <abbr title="required">*</abbr> </label>
+                        </div>
+                        <div class="form__inputErrorMessage"></div>
+                        <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
+                        <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
+                        <div class="form__inputDownArrow"><img src="images/icon-arrow-down.png"></div>
+                    </div>
+                    <div class="form__inputElementGroup m--form__inputElementGroup__notWide ">
+                        <div class="form__inputElementWrapper m--form__inputElementWrapper-withRightMargin js--labelFocusSlide js--validateElement">
+                            <div class="form__inputElement m--form__inputElement-name  m--form__inputElement__notWide">
+                                <input id="firstName" name="firstName" class="form__inputField js--validateInput-required" data-validate="required" type="text">
+                                <label for="firstName" class="form__inputLabel ">First Name <abbr title="required">*</abbr> </label>
+                            </div>
+                            <div class="form__inputErrorMessage"></div>
+                            <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
+                            <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
+                        </div>
+                        <div class="form__inputElementWrapper js--labelFocusSlide js--validateElement">
+                            <div class="form__inputElement m--form__inputElement-lastName m--form__inputElement__notWide">
+                                <input id="lastName" name="lastName" class="form__inputField" data-validate="required" type="text">
+                                <label for="lastName" class="form__inputLabel">Last Name <abbr title="required">*</abbr> </label>
+                            </div>
+                            <div class="form__inputErrorMessage"></div>
+                            <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
+                            <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
+                        </div>
+                    </div>
+                    <div class="form__inputElementWrapper js--labelFocusSlide js--validateElement">
+                        <div class="form__inputElement m--form__inputElement-email">
+                            <input id="email" name="email" class="form__inputField" data-validate="required email" type="email">
+                            <label for="email" class="form__inputLabel">Email Address <abbr title="required">*</abbr> </label>
+                        </div>
+                        <div class="form__inputErrorMessage"></div>
+                        <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
+                        <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
+                    </div>
+                    <div class="form__inputElementWrapper js--labelFocusSlide js--validateElement">
+                        <div class="formBlock__compliance ">
+                            <label class="defaultCheckbox m--defaultCheckbox-withPadding">
+                                <input class="checkbox form__inputField" type="checkbox" name="compliance" data-validate="checked"> <span class="checkboxCustom"></span> <span class="label">I would like to receive email updates from the University</span>
+                                <div class="form__inputErrorIcon m--form__inputErrorIcon-forChecbox"><img src="images/icon-invalid.png"></div>
+                                <div class="form__inputSuccessIcon  m--form__inputSuccessIcon-forChecbox"><img src="images/icon-valid.png"></div>
+                            </label>
+                        </div>
+                        <div class="form__inputErrorMessage m--form__inputErrorMessage-forChecbox"></div>
+                    </div>
+                    <div class="formBlock__submitButton js--validateSubmitButton">
+                        <div class="defaultButton m--defaultButton-withMargin"> Make A Booking </div>
+                    </div>
+                    <div class="formBlock__footNote"> The information provided by you will be held by the University of Essex in accordance with the University's Data protection Policy and may be used for the University's marketing purposes. On occasion we may contact you to advertise events with information relevant to student recruitment. If you do not wish to receive this information, please select the opt out function which can be found at the foot of your confirmation email. You will receive this email within 24 hours of registering. </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</body>
+
+</html>

@@ -4962,6 +4962,10 @@ body {
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 
+.defaultCheckbox {
+  /* position: relative; */
+}
+
 .defaultCheckbox.m--defaultCheckbox-withPadding {
   display: inline-block;
   margin-top: 25px;
@@ -5153,6 +5157,12 @@ body {
 
   .form__inputDownArrow {
     right: 35px;
+  }
+}
+
+@media (max-width: 450px) {
+  .defaultCheckbox.m--defaultCheckbox-withPadding {
+    padding-right: 15px;
   }
 }
 
