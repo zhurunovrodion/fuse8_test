@@ -257,7 +257,6 @@ em {
   -webkit-animation-name: bounce;
   animation-name: bounce;
   -webkit-transform-origin: center bottom;
-  -ms-transform-origin: center bottom;
   transform-origin: center bottom;
 }
 
@@ -572,7 +571,6 @@ em {
 
 .swing {
   -webkit-transform-origin: top center;
-  -ms-transform-origin: top center;
   transform-origin: top center;
   -webkit-animation-name: swing;
   animation-name: swing;
@@ -806,7 +804,6 @@ em {
   -webkit-animation-name: jello;
   animation-name: jello;
   -webkit-transform-origin: center;
-  -ms-transform-origin: center;
   transform-origin: center;
 }
 
@@ -3611,31 +3608,25 @@ em {
    ------------------------------------------------- */
 
 .datepicker--cells {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .datepicker--cell {
-  -webkit-border-radius: 0px;
   border-radius: 0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
   position: relative;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
@@ -3662,7 +3653,6 @@ em {
 .datepicker--cell.-in-range- {
   background: rgba(92, 196, 239, 0.1);
   color: #4a4a4a;
-  -webkit-border-radius: 0;
   border-radius: 0;
 }
 
@@ -3690,19 +3680,16 @@ em {
 .datepicker--cell.-range-from- {
   border: 1px solid rgba(92, 196, 239, 0.5);
   background-color: rgba(92, 196, 239, 0.1);
-  -webkit-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
 }
 
 .datepicker--cell.-range-to- {
   border: 1px solid rgba(92, 196, 239, 0.5);
   background-color: rgba(92, 196, 239, 0.1);
-  -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
 }
 
 .datepicker--cell.-range-from-.-range-to- {
-  -webkit-border-radius: 4px;
   border-radius: 4px;
 }
 
@@ -3726,11 +3713,9 @@ em {
 }
 
 .datepicker--days-names {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 8px 0 3px;
@@ -3738,19 +3723,15 @@ em {
 
 .datepicker--day-name {
   color: #db4433;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
-  -webkit-flex: 1;
   -ms-flex: 1;
   -webkit-box-flex: 1;
   flex: 1;
@@ -3843,7 +3824,6 @@ em {
   border: 2px solid #dbdbdb;
   -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 0px;
   border-radius: 0px;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -3856,7 +3836,6 @@ em {
   opacity: 0;
   transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   -webkit-transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
-  -o-transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   z-index: 100;
@@ -3864,36 +3843,30 @@ em {
 
 .datepicker.-from-top- {
   -webkit-transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
   transform: translateY(-8px);
 }
 
 .datepicker.-from-right- {
   -webkit-transform: translateX(8px);
-  -ms-transform: translateX(8px);
   transform: translateX(8px);
 }
 
 .datepicker.-from-bottom- {
   -webkit-transform: translateY(8px);
-  -ms-transform: translateY(8px);
   transform: translateY(8px);
 }
 
 .datepicker.-from-left- {
   -webkit-transform: translateX(-8px);
-  -ms-transform: translateX(-8px);
   transform: translateX(-8px);
 }
 
 .datepicker.active {
   opacity: 1;
   -webkit-transform: translate(0);
-  -ms-transform: translate(0);
   transform: translate(0);
   transition: opacity 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;
   -webkit-transition: opacity 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;
-  -o-transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0s;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0s;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;
 }
@@ -3907,7 +3880,6 @@ em {
   right: auto;
   opacity: 1;
   -webkit-transform: none;
-  -ms-transform: none;
   transform: none;
 }
 
@@ -3938,40 +3910,32 @@ em {
 .-top-left- .datepicker--pointer,
 .-top-center- .datepicker--pointer,
 .-top-right- .datepicker--pointer {
-  top: -webkit-calc(100% - 4px);
   top: calc(100% - 4px);
   -webkit-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
 .-right-top- .datepicker--pointer,
 .-right-center- .datepicker--pointer,
 .-right-bottom- .datepicker--pointer {
-  right: -webkit-calc(100% - 4px);
   right: calc(100% - 4px);
   -webkit-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
 .-bottom-left- .datepicker--pointer,
 .-bottom-center- .datepicker--pointer,
 .-bottom-right- .datepicker--pointer {
-  bottom: -webkit-calc(100% - 4px);
   bottom: calc(100% - 4px);
   -webkit-transform: rotate(315deg);
-  -ms-transform: rotate(315deg);
   transform: rotate(315deg);
 }
 
 .-left-top- .datepicker--pointer,
 .-left-center- .datepicker--pointer,
 .-left-bottom- .datepicker--pointer {
-  left: -webkit-calc(100% - 4px);
   left: calc(100% - 4px);
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -3987,7 +3951,6 @@ em {
 
 .-top-center- .datepicker--pointer,
 .-bottom-center- .datepicker--pointer {
-  left: -webkit-calc(50% - 10px / 2);
   left: calc(50% - 10px / 2);
 }
 
@@ -4003,7 +3966,6 @@ em {
 
 .-left-center- .datepicker--pointer,
 .-right-center- .datepicker--pointer {
-  top: -webkit-calc(50% - 10px / 2);
   top: calc(50% - 10px / 2);
 }
 
@@ -4063,11 +4025,9 @@ em {
    ------------------------------------------------- */
 
 .datepicker--nav {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
   justify-content: space-between;
@@ -4082,16 +4042,13 @@ em {
 
 .datepicker--nav-title,
 .datepicker--nav-action {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
   cursor: pointer;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
@@ -4099,7 +4056,6 @@ em {
 
 .datepicker--nav-action {
   width: 32px;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4127,7 +4083,6 @@ em {
 }
 
 .datepicker--nav-title {
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   padding: 0 8px;
 }
@@ -4148,7 +4103,6 @@ em {
 }
 
 .datepicker--buttons {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -4159,21 +4113,16 @@ em {
 .datepicker--button {
   color: #4EB5E6;
   cursor: pointer;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
-  -webkit-flex: 1;
   -ms-flex: 1;
   -webkit-box-flex: 1;
   flex: 1;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
@@ -4234,11 +4183,9 @@ em {
 
 .datepicker--time {
   border-top: 1px solid #efefef;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
@@ -4247,7 +4194,6 @@ em {
 }
 
 .datepicker--time.-am-pm- .datepicker--time-sliders {
-  -webkit-flex: 0 1 138px;
   -ms-flex: 0 1 138px;
   -webkit-box-flex: 0;
   flex: 0 1 138px;
@@ -4259,7 +4205,6 @@ em {
 }
 
 .datepicker--time-sliders {
-  -webkit-flex: 0 1 153px;
   -ms-flex: 0 1 153px;
   -webkit-box-flex: 0;
   flex: 0 1 153px;
@@ -4273,15 +4218,12 @@ em {
 }
 
 .datepicker--time-current {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
-  -webkit-flex: 1;
   -ms-flex: 1;
   -webkit-box-flex: 1;
   flex: 1;
@@ -4308,7 +4250,6 @@ em {
 .datepicker--time-current-minutes:after {
   content: '';
   background: #f0f0f0;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   position: absolute;
   left: -2px;
@@ -4336,19 +4277,15 @@ em {
 }
 
 .datepicker--time-row {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
   font-size: 11px;
   height: 17px;
   background: -webkit-gradient(linear, left top, right top, from(#dedede), to(#dedede)) left 0.5% 1px no-repeat;
-  background: -webkit-linear-gradient(left, #dedede, #dedede) left 0.5% 1px no-repeat;
-  background: -o-linear-gradient(left, #dedede, #dedede) left 0.5% 1px no-repeat;
   background: linear-gradient(to right, #dedede, #dedede) left 0.5% 1px no-repeat;
 }
 
@@ -4359,7 +4296,6 @@ em {
 .datepicker--time-row input[type='range'] {
   background: none;
   cursor: pointer;
-  -webkit-flex: 1;
   -ms-flex: 1;
   -webkit-box-flex: 1;
   flex: 1;
@@ -4413,13 +4349,11 @@ em {
   box-sizing: border-box;
   height: 12px;
   width: 12px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #dedede;
   background: #fff;
   cursor: pointer;
   -webkit-transition: background .2s;
-  -o-transition: background .2s;
   transition: background .2s;
 }
 
@@ -4432,7 +4366,6 @@ em {
   background: #fff;
   cursor: pointer;
   -webkit-transition: background .2s;
-  -o-transition: background .2s;
   transition: background .2s;
 }
 
@@ -4445,7 +4378,6 @@ em {
   background: #fff;
   cursor: pointer;
   -webkit-transition: background .2s;
-  -o-transition: background .2s;
   transition: background .2s;
 }
 
@@ -4492,7 +4424,6 @@ em {
 .datepicker--time-icon {
   color: #9c9c9c;
   border: 1px solid;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   font-size: 16px;
   position: relative;
@@ -4511,21 +4442,16 @@ em {
 .datepicker--time-icon:after {
   height: .4em;
   width: 1px;
-  left: -webkit-calc(50% - 1px);
   left: calc(50% - 1px);
-  top: -webkit-calc(50% + 1px);
   top: calc(50% + 1px);
   -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 
 .datepicker--time-icon:before {
   width: .4em;
   height: 1px;
-  top: -webkit-calc(50% + 1px);
   top: calc(50% + 1px);
-  left: -webkit-calc(50% - 1px);
   left: calc(50% - 1px);
 }
 
@@ -4645,7 +4571,6 @@ body {
   left: 50%;
   top: 20px;
   -webkit-transform: translate(-50%, 4%);
-  -ms-transform: translate(-50%, 4%);
   transform: translate(-50%, 4%);
   display: none;
 }
@@ -4671,11 +4596,8 @@ body {
   max-height: 318px;
   height: 50vw;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(rgba(255, 255, 255, 0))), url('../images/bgSubstrate.png');
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0)), url('../images/bgSubstrate.png');
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0)), url('../images/bgSubstrate.png');
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0)), url('../images/bgSubstrate.png');
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
   padding: 40px;
   padding-top: 20px;
@@ -4713,7 +4635,6 @@ body {
 
 .modal__formBlock {
   margin: 0 auto;
-  width: -webkit-calc(100% - 80px);
   width: calc(100% - 80px);
   height: auto;
   position: absolute;
@@ -4763,7 +4684,6 @@ body {
   user-select: none;
   cursor: pointer;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -4811,10 +4731,8 @@ body {
   width: 2px;
   background-color: #ffffff;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -4827,10 +4745,8 @@ body {
   width: 2px;
   background-color: #ffffff;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -4866,14 +4782,11 @@ body {
 .form__inputElementGroup {
   margin-top: 15px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  width: -webkit-calc(100% - 25px);
   width: calc(100% - 25px);
 }
 
@@ -4883,13 +4796,11 @@ body {
 
 .form__inputElementGroup .form__inputElementWrapper {
   position: relative;
-  width: -webkit-calc(50% - 15px);
   width: calc(50% - 15px);
 }
 
 .form__inputElementWrapper {
   position: relative;
-  width: -webkit-calc(100% - 25px);
   width: calc(100% - 25px);
 }
 
@@ -4898,7 +4809,6 @@ body {
 }
 
 .form__inputElementWrapper.m--form__inputElementWrapper-halfWidth {
-  width: -webkit-calc(50% - 25px);
   width: calc(50% - 25px);
 }
 
@@ -4969,7 +4879,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  -webkit-border-radius: 0;
   border-radius: 0;
 }
 
@@ -4993,11 +4902,9 @@ body {
   line-height: 22px;
   cursor: text;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
   transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -o-transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
@@ -5024,7 +4931,6 @@ body {
   /* for FF */
   -moz-appearance: none;
   text-indent: 0.01px;
-  -o-text-overflow: '';
   text-overflow: '';
   /* for IE */
   -ms-appearance: none;
@@ -5045,11 +4951,9 @@ body {
   font-weight: 700;
   cursor: text;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
   transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  -o-transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
@@ -5104,10 +5008,8 @@ body {
   left: -10px;
   opacity: 1;
   -webkit-transform: scale(1) rotateZ(0deg);
-  -ms-transform: scale(1) rotate(0deg);
   transform: scale(1) rotateZ(0deg);
   -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   font-family: 'Open Sans', Open Sans;
   font-size: 9px;
@@ -5118,7 +5020,6 @@ body {
 
 @media (max-width: 550px) {
   .modal {
-    display: block;
     width: 728px;
     max-width: 100%;
     height: 100%;
@@ -5127,7 +5028,6 @@ body {
     left: 50%;
     top: 0px;
     -webkit-transform: translate(-50%, 0%);
-    -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
   }
 
@@ -5161,8 +5061,6 @@ body {
     padding: 15px;
     padding-top: 30px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.6))), url('../images/bgSubstrate.png');
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/bgSubstrate.png');
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/bgSubstrate.png');
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/bgSubstrate.png');
   }
 
@@ -5175,7 +5073,6 @@ body {
     margin-top: 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
@@ -5183,22 +5080,18 @@ body {
 
   .form__inputElementGroup .form__inputElementWrapper {
     position: relative;
-    width: -webkit-calc(100% - 10px);
     width: calc(100% - 10px);
   }
 
   .form__inputElementWrapper {
-    width: -webkit-calc(100% - 10px);
     width: calc(100% - 10px);
   }
 
   .form__inputElementWrapper.m--form__inputElementWrapper-halfWidth {
-    width: -webkit-calc(100% - 10px);
     width: calc(100% - 10px);
   }
 
   .form__inputElement {
-    width: -webkit-calc(100% - 10px);
     width: calc(100% - 10px);
     position: relative;
     overflow: hidden;
@@ -5224,7 +5117,6 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    -webkit-border-radius: 0;
     border-radius: 0;
   }
 
@@ -5240,11 +5132,9 @@ body {
     line-height: 22px;
     cursor: text;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
     transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
-    -o-transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
     transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
     transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
   }
@@ -5291,7 +5181,6 @@ body {
     width: 2px;
     background-color: #ffffff;
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
@@ -5304,7 +5193,6 @@ body {
     width: 2px;
     background-color: #ffffff;
     -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
 }

@@ -3,8 +3,16 @@ var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var gcmq = require('gulp-group-css-media-queries');
 var browserSync = require('browser-sync');
-
-
+var babel = require('gulp-babel');
+var rename = require("gulp-rename");
+var plumber = require('gulp-plumber');            // Обработчик ошибок сборщика
+var path = require('path');                       // Утилита для работы с путями
+var concat = require('gulp-concat');              // объединяет файлы в один бандл
+var cleanCSS = require('gulp-clean-css');         // сжимает css
+var uglify = require('gulp-uglify');              // Сжимает js
+var sourcemaps = require('gulp-sourcemaps');      // Генерация Source-maps
+var  babelify = require('babelify');
+var  browserify = require("browserify");
 
 
 gulp.task('compileLess', function(){
@@ -12,7 +20,7 @@ gulp.task('compileLess', function(){
 	gulp.src('less/style.less')
 		.pipe(less())
 		.pipe(autoprefixer({
-            browsers: ['last 15 versions'],
+            browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(gcmq())
@@ -37,4 +45,57 @@ gulp.task('browser-sync', function(){
 		},
 
 	});
+});
+
+
+
+gulp.task('babel-build', function () {
+  return gulp.src('js/**/*.js')
+      .pipe(babel())
+    .pipe(gulp.dest('build/js/'));
+});
+
+
+// ---------------- JS --------------------------------------------------
+
+var jsPath = 'js/';                              // Директория JS
+var jsOutFile = 'c.js';                            // Название выходного js файла
+var jsOutPath = 'build/js/c';            // Папка для выходного js файла
+var jsMapOutPath = 'map';                     // Папка для map файлов
+
+var jsSourcemapsOptions = { sourceMappingURLPrefix: '/js' };  // Опции для настройка sourceMaps
+
+// Список js файлов для сборки
+// названия файлов указываются от jsPath
+var jsFiles = [
+	"js/libs/device.js",
+	"js/libs/jquery.js",
+	"js/libs/jqueryMigrate.js",
+	"js/libs/jqueryEasing.js",
+	"js/libs/datepicker.js",
+	"js/modules/userInterface.js",
+	"js/modules/validator.js",
+	"js/proj.js",
+	"js/main.js"
+    
+];
+
+
+// Сборка и минимизация JS
+gulp.task('build-js',  function(){
+    gulp.src(jsFiles)
+         .pipe(sourcemaps.init())
+        .pipe(concat(jsOutFile))
+       
+        .pipe(babel())
+        .pipe(uglify(
+            {
+                compress: {
+                    unused: false,  
+                }
+            }
+            )
+        )
+         .pipe(sourcemaps.write(jsMapOutPath, jsSourcemapsOptions))
+        .pipe(gulp.dest(jsOutPath));
 });
