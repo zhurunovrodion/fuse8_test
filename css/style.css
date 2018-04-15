@@ -223,6 +223,7 @@ em {
   left: 50%;
   top: 20px;
   -webkit-transform: translate(-50%, 4%);
+  -ms-transform: translate(-50%, 4%);
   transform: translate(-50%, 4%);
 }
 
@@ -243,8 +244,11 @@ em {
   max-height: 318px;
   height: 50vw;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(rgba(255, 255, 255, 0))), url('../images/bgSubstrate.png');
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0)), url('../images/bgSubstrate.png');
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0)), url('../images/bgSubstrate.png');
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0)), url('../images/bgSubstrate.png');
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
   background-size: cover;
   padding: 40px;
   padding-top: 20px;
@@ -282,6 +286,7 @@ em {
 
 .modal__formBlock {
   margin: 0 auto;
+  width: -webkit-calc(100% - 80px);
   width: calc(100% - 80px);
   height: auto;
   position: absolute;
@@ -326,6 +331,7 @@ em {
   user-select: none;
   cursor: pointer;
   -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -367,8 +373,10 @@ em {
   width: 2px;
   background-color: #ffffff;
   -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -381,8 +389,10 @@ em {
   width: 2px;
   background-color: #ffffff;
   -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -418,11 +428,14 @@ em {
 .form__inputElementGroup {
   margin-top: 15px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: -webkit-calc(100% - 25px);
   width: calc(100% - 25px);
 }
 
@@ -432,11 +445,13 @@ em {
 
 .form__inputElementGroup .form__inputElementWrapper {
   position: relative;
+  width: -webkit-calc(50% - 15px);
   width: calc(50% - 15px);
 }
 
 .form__inputElementWrapper {
   position: relative;
+  width: -webkit-calc(100% - 25px);
   width: calc(100% - 25px);
 }
 
@@ -445,6 +460,7 @@ em {
 }
 
 .form__inputElementWrapper.m--form__inputElementWrapper-halfWidth {
+  width: -webkit-calc(50% - 25px);
   width: calc(50% - 25px);
 }
 
@@ -452,7 +468,7 @@ em {
   width: 100%;
   position: relative;
   overflow: hidden;
-  height: 60px;
+  height: 70px;
   margin-bottom: 20px;
   border: 3px solid #eaeaea;
   background-color: #ffffff;
@@ -506,7 +522,7 @@ em {
 .form__inputField {
   width: 100%;
   height: 100%;
-  padding: 10px 0 0 25px;
+  padding: 17px 0 0 25px;
   position: absolute;
   bottom: 0;
   border: none;
@@ -515,6 +531,7 @@ em {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+  -webkit-border-radius: 0;
   border-radius: 0;
 }
 
@@ -537,16 +554,18 @@ em {
   line-height: 22px;
   cursor: text;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
   transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 
 .form__selectField {
   width: 100%;
-  height: 60px;
+  height: 70px;
   padding-top: 30px;
   padding: 10px 0 0 25px;
   -webkit-box-sizing: border-box;
@@ -561,6 +580,7 @@ em {
   /* for FF */
   -moz-appearance: none;
   text-indent: 0.01px;
+  -o-text-overflow: '';
   text-overflow: '';
   /* for IE */
   -ms-appearance: none;
@@ -580,9 +600,11 @@ em {
   font-weight: 700;
   cursor: text;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
   transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
   transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
@@ -637,8 +659,10 @@ em {
   left: -10px;
   opacity: 1;
   -webkit-transform: scale(1) rotateZ(0deg);
+  -ms-transform: scale(1) rotate(0deg);
   transform: scale(1) rotateZ(0deg);
   -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   font-family: 'Open Sans', Open Sans;
   font-size: 9px;
@@ -658,6 +682,7 @@ em {
     left: 50%;
     top: 0px;
     -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
   }
 
@@ -691,6 +716,8 @@ em {
     padding: 15px;
     padding-top: 30px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.6))), url('../images/bgSubstrate.png');
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/bgSubstrate.png');
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/bgSubstrate.png');
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/bgSubstrate.png');
   }
 
@@ -703,6 +730,7 @@ em {
     margin-top: 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
@@ -710,15 +738,23 @@ em {
 
   .form__inputElementGroup .form__inputElementWrapper {
     position: relative;
-    width: calc(100% - 25px);
+    width: -webkit-calc(100% - 10px);
+    width: calc(100% - 10px);
+  }
+
+  .form__inputElementWrapper {
+    width: -webkit-calc(100% - 10px);
+    width: calc(100% - 10px);
   }
 
   .form__inputElementWrapper.m--form__inputElementWrapper-halfWidth {
-    width: calc(100% - 25px);
+    width: -webkit-calc(100% - 10px);
+    width: calc(100% - 10px);
   }
 
   .form__inputElement {
-    width: calc(100% - 25px);
+    width: -webkit-calc(100% - 10px);
+    width: calc(100% - 10px);
     position: relative;
     overflow: hidden;
     height: 60px;
@@ -732,7 +768,7 @@ em {
   }
 
   .form__inputField {
-    width: calc(95%);
+    width: 100%;
     height: 100%;
     padding: 10px 0 0 25px;
     position: absolute;
@@ -743,6 +779,7 @@ em {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    -webkit-border-radius: 0;
     border-radius: 0;
   }
 
@@ -758,11 +795,17 @@ em {
     line-height: 22px;
     cursor: text;
     -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
     transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+    -o-transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
     transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
     transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  }
+
+  .form__selectField {
+    height: 60px;
   }
 
   .form__inputErrorIcon {
@@ -803,6 +846,7 @@ em {
     width: 2px;
     background-color: #ffffff;
     -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
 
@@ -815,6 +859,7 @@ em {
     width: 2px;
     background-color: #ffffff;
     -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
 }

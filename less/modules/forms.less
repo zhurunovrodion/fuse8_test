@@ -75,7 +75,7 @@
 	    position: relative;
 	    overflow: hidden;
 	   
-	    height: 60px;
+	    height: 70px;
 	    margin-bottom: 20px;
 	    border: 3px solid #eaeaea;
 		background-color: #ffffff;
@@ -138,7 +138,7 @@
 	&__inputField {
 	    width: 100%;
 	    height: 100%;
-	    padding: 10px 0 0 25px;
+	    padding: 17px 0 0 25px;
 	    position: absolute;
 	    bottom: 0;
 	    border: none;
@@ -180,7 +180,7 @@
 		&__selectField{
 
 				  width: 100%;
-				  height: 60px;
+				  height: 70px;
 				  padding-top: 30px;
 				    padding: 10px 0 0 25px;
 				  box-sizing: border-box;
@@ -238,7 +238,7 @@
 
 			.form__inputElementWrapper{
 				position: relative;
-					width: ~"calc(100% - 25px)";
+					width: ~"calc(100% - 10px)";
 				
 				&.m--form__inputElementWrapper-withRightMargin{
 					
@@ -253,18 +253,18 @@
 
 
 		&__inputElementWrapper{
-			
+			width: ~"calc(100% - 10px)";
 			&.m--form__inputElementWrapper-withRightMargin{
 				
 			}
 
 			&.m--form__inputElementWrapper-halfWidth{
-				width: ~"calc(100% - 25px)";
+				width: ~"calc(100% - 10px)";
 			}
 		}
 
 		&__inputElement {
-			width: ~"calc(100% - 25px)";
+			width: ~"calc(100% - 10px)";
 		    position: relative;
 		    overflow: hidden;
 		   
@@ -287,7 +287,7 @@
 		}
 
 		&__inputField {
-		    width: calc(100% - 5px);
+		    width: 100%;
 		    height: 100%;
 		    padding: 10px 0 0 25px;
 		    position: absolute;
@@ -314,6 +314,15 @@
 		    cursor: text;
 		    transform: translateY(-50%);
 		    transition: transform .2s ease-out,top .2s ease-out,font-size .2s ease-out;
+		}
+
+		&__selectField{
+
+				 
+				  height: 60px;
+				 
+				 
+				
 		}
 
 
