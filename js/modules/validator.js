@@ -31,15 +31,19 @@ class Validator{
 		$validateElements.each(function() {
 			
 			let $inputField = $('.form__inputField', this);
-			let $errorMessage = $('form__inputErrorMessage', this);
+			let $errorMessage = $('.form__inputErrorMessage', this);
 			let $errorIcon =  $('.form__inputErrorIcon', this);
 			let $successIcon =  $('.form__inputSuccessIcon', this);
 			
 			let validateSettings = '';
 			if($inputField.attr('data-validate')){
 				validateSettings = $inputField.attr('data-validate').split(" ");
-				let fieldErrors = '';
+				let fieldErrors = 0;
+
 				for (let setting of validateSettings){
+					if (fieldErrors>0){
+						continue;
+					}
 					switch(setting) {
 					  case 'required': 
 					  
@@ -49,23 +53,54 @@ class Validator{
 					  			   		$successIcon.removeClass('m--inputSuccessIcon-isShowned');
 					  			   } 
 						           $errorIcon.addClass('m--inputErrorIcon-isShowned');
-						           
-						           
+						           $errorMessage.html('This field is required');
+						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
+						           fieldErrors++;
 						          
 						     }else{
 						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
 						     		 $errorIcon.removeClass('m--inputErrorIcon-isShowned');
+						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
 						     	}
 						     	$successIcon.addClass('m--inputSuccessIcon-isShowned');
 						     }
 					   	break; 
 					   case 'email': 
-					  
+					  		if(!(/^([a-z0-9_-]+.)*[a-z0-9_-]+@([a-z0-9][a-z0-9-]*[a-z0-9].)+[a-z]{2,4}$/i).test($inputField.val().trim())){
+					  			 if($successIcon.is('.m--inputSuccessIcon-isShowned')){
+					  			   		$successIcon.removeClass('m--inputSuccessIcon-isShowned');
+					  			   } 
+						           $errorIcon.addClass('m--inputErrorIcon-isShowned');
+						           $errorMessage.html('Invalid email format');
+						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
+						           fieldErrors++;
+					  		}else{
+						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
+						     		 $errorIcon.removeClass('animated fadeIn m--inputErrorIcon-isShowned');
+						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
+						     	}
+						     	$successIcon.addClass('animated fadeIn m--inputSuccessIcon-isShowned');
+						     }
+
 					   		console.log('проверка почты');
 					  		console.log('2');
 					   	break;
 					   	case 'date': 
-					  
+					  		if(!proj.validator.isValidDate($inputField.val().trim())){
+					  			 if($successIcon.is('.m--inputSuccessIcon-isShowned')){
+					  			   		$successIcon.removeClass('animated fadeIn m--inputSuccessIcon-isShowned');
+					  			   } 
+						           $errorIcon.addClass('animated fadeIn m--inputErrorIcon-isShowned');
+						           $errorMessage.html('Invalid date format');
+						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
+						           fieldErrors++;
+					  		}else{
+						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
+						     		 $errorIcon.removeClass('animated fadeIn m--inputErrorIcon-isShowned');
+						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
+						     	}
+						     	$successIcon.addClass('animated fadeIn m--inputSuccessIcon-isShowned');
+						     }
 					   		console.log('проверка даты');
 					   		console.log('2');
 					   	break;
@@ -81,6 +116,20 @@ class Validator{
 
 		});
 		return 0;
+	}
+
+	isValidDate(value){
+	  console.log(value);
+	  var arrD = value.split("-");
+	  arrD[1] -= 1;
+	  var d = new Date(arrD[0], arrD[1], arrD[2]);
+	   console.log(d);
+	  if ((d.getFullYear() == arrD[0]) && (d.getMonth() == arrD[1]) && (d.getDate() == arrD[2])) {
+	    return true;
+	  } else {
+	    
+	    return false;
+	  }
 	}
 
 }
