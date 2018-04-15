@@ -12,7 +12,7 @@ gulp.task('compileLess', function(){
 	gulp.src('less/style.less')
 		.pipe(less())
 		.pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ['last 15 versions'],
             cascade: false
         }))
         .pipe(gcmq())

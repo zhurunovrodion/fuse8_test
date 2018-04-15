@@ -17,6 +17,7 @@
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 20px;
+		padding-bottom: 15px;
 	}
 
 	&__footNote{
@@ -42,6 +43,19 @@
 			bottom: 4px;
 			
 			}
+
+		.form__inputElementWrapper{
+			position: relative;
+				width: ~"calc(50% - 15px)";
+			
+			&.m--form__inputElementWrapper-withRightMargin{
+				
+			}
+
+			&.m--form__inputElementWrapper-halfWidth{
+				
+			}
+		}
 	}
 
 	&__inputElementWrapper{
@@ -49,6 +63,10 @@
 		width: ~"calc(100% - 25px)";
 		&.m--form__inputElementWrapper-withRightMargin{
 			margin-right: 30px;
+		}
+
+		&.m--form__inputElementWrapper-halfWidth{
+			width: ~"calc(50% - 25px)";
 		}
 	}
 
@@ -81,7 +99,7 @@
 		font-family: @font-family-opensans;
 		font-size: 12px;
 		font-weight: 400;
-		
+		display: none;
 		position: absolute;
 		bottom: -17px;
 		z-index: 999;
@@ -92,23 +110,33 @@
 	}
 
 	&__inputErrorIcon{
+		display: none;
 		position: absolute;
 		right: -27px;
 		z-index: 999;
 		top: 30%;
 		bottom: 50%;
+
+		&.m--inputErrorIcon-isShowned{
+			display: block;
+		}
 	}
 
 	&__inputSuccessIcon{
+		display: none;
 		position: absolute;
 		right: -27px;
 		z-index: 999;
 		top: 30%;
 		bottom: 50%;
+		&.m--inputSuccessIcon-isShowned{
+			display: block;
+		}
+
 	}
 
 	&__inputField {
-	    width: calc(100% - 5px);
+	    width: 100%;
 	    height: 100%;
 	    padding: 10px 0 0 25px;
 	    position: absolute;
@@ -120,6 +148,17 @@
 		font-weight: 400;
 		line-height: 24px;
 	    border-radius: 0;
+
+	    
+	}
+
+
+	&__inputDownArrow{
+		position: absolute;
+		right: 15px;
+		
+		top: 40%;
+		bottom: 50%;
 	}
 
 	&__inputLabel {
@@ -132,6 +171,53 @@
 		font-size: 16px;
 		font-weight: 700;
 		line-height: 22px;
+	    cursor: text;
+	    transform: translateY(-50%);
+	    transition: transform .2s ease-out,top .2s ease-out,font-size .2s ease-out;
+	}
+
+
+		&__selectField{
+
+				  width: 100%;
+				  height: 60px;
+				  padding-top: 30px;
+				    padding: 10px 0 0 25px;
+				  box-sizing: border-box;
+				  -webkit-appearance: none;
+				  
+				 border: none;
+				 color: #333333;
+				font-family: @font-family-opensans;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 24px;
+				  /* for FF */
+				  -moz-appearance: none;
+				  text-indent: 0.01px; 
+				  text-overflow: '';
+				  /* for IE */
+				  -ms-appearance: none;
+				  appearance: none!important;
+				
+				 
+				
+		}
+	&__selectLabel{
+		color: #adadad;
+		
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 22px;
+		 position: absolute;
+	    top: 30%;
+	    padding-left: 25px;
+	    pointer-events: none;
+	    color: #adadad;
+		font-family: @font-family-opensans;
+		
+		font-weight: 700;
+		
 	    cursor: text;
 	    transform: translateY(-50%);
 	    transition: transform .2s ease-out,top .2s ease-out,font-size .2s ease-out;
@@ -149,8 +235,32 @@
 			
 			flex-direction: column;
 			width: 100%;
+
+			.form__inputElementWrapper{
+				position: relative;
+					width: ~"calc(100% - 25px)";
+				
+				&.m--form__inputElementWrapper-withRightMargin{
+					
+				}
+
+				&.m--form__inputElementWrapper-halfWidth{
+					
+				}
+			}
 			
+		}
+
+
+		&__inputElementWrapper{
 			
+			&.m--form__inputElementWrapper-withRightMargin{
+				
+			}
+
+			&.m--form__inputElementWrapper-halfWidth{
+				width: ~"calc(100% - 25px)";
+			}
 		}
 
 		&__inputElement {
@@ -206,6 +316,8 @@
 		    transition: transform .2s ease-out,top .2s ease-out,font-size .2s ease-out;
 		}
 
+
+
 		&__inputErrorIcon{
 			
 			right: -7px;
@@ -218,6 +330,15 @@
 			right: -7px;
 			
 		}
+
+		&__inputDownArrow{
+		
+		right: 35px;
+		
+		
+		}
+
+
 	}
 
 
