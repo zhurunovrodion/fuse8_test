@@ -217,7 +217,6 @@ em {
   display: block;
   width: 728px;
   max-width: 100%;
-  min-height: 400px;
   height: 100%;
   position: fixed;
   z-index: 100;
@@ -415,6 +414,108 @@ em {
   line-height: 18px;
 }
 
+.form__inputElementGroup {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: calc(100% - 25px);
+}
+
+.form__inputElementGroup .form__inputErrorMessage {
+  bottom: 4px;
+}
+
+.form__inputElementWrapper {
+  position: relative;
+  width: calc(100% - 25px);
+}
+
+.form__inputElementWrapper.m--form__inputElementWrapper-withRightMargin {
+  margin-right: 30px;
+}
+
+.form__inputElement {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+  margin-bottom: 20px;
+  border: 3px solid #eaeaea;
+  background-color: #ffffff;
+}
+
+.form__inputElement.m--form__inputElement-withRightMargin {
+  margin-right: 30px;
+}
+
+.form__inputErrorMessage {
+  color: #db4433;
+  font-family: 'Open Sans', Open Sans;
+  font-size: 12px;
+  font-weight: 400;
+  position: absolute;
+  bottom: -17px;
+  z-index: 999;
+}
+
+.form__inputErrorMessage.m--inputErrorMessage-isShowned {
+  display: block;
+}
+
+.form__inputErrorIcon {
+  position: absolute;
+  right: -27px;
+  z-index: 999;
+  top: 30%;
+  bottom: 50%;
+}
+
+.form__inputSuccessIcon {
+  position: absolute;
+  right: -27px;
+  z-index: 999;
+  top: 30%;
+  bottom: 50%;
+}
+
+.form__inputField {
+  width: calc(95%);
+  height: 100%;
+  padding: 10px 0 0 25px;
+  position: absolute;
+  bottom: 0;
+  border: none;
+  color: #333333;
+  font-family: 'Open Sans', Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  border-radius: 0;
+}
+
+.form__inputLabel {
+  position: absolute;
+  top: 50%;
+  padding-left: 25px;
+  pointer-events: none;
+  color: #adadad;
+  font-family: 'Open Sans', Open Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  cursor: text;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
+  transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
 .defaultCheckbox.m--defaultCheckbox-withPadding {
   display: inline-block;
   margin-top: 25px;
@@ -475,71 +576,11 @@ em {
   text-align: center;
 }
 
-.form__inputElementGroup {
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: calc(100% - 25px);
-}
-
-.form__inputElement {
-  width: calc(100% - 25px);
-  position: relative;
-  overflow: hidden;
-  height: 60px;
-  margin-bottom: 20px;
-  border: 3px solid #eaeaea;
-  background-color: #ffffff;
-}
-
-.form__inputElement.m--form__inputElement-withRightMargin {
-  margin-right: 30px;
-}
-
-.form__inputField {
-  width: calc(95%);
-  height: 100%;
-  padding: 10px 0 0 25px;
-  position: absolute;
-  bottom: 0;
-  border: none;
-  color: #333333;
-  font-family: 'Open Sans', Open Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  border-radius: 0;
-}
-
-.form__inputLabel {
-  position: absolute;
-  top: 50%;
-  padding-left: 25px;
-  pointer-events: none;
-  color: #adadad;
-  font-family: 'Open Sans', Open Sans;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  cursor: text;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
-  transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
-}
-
 @media (max-width: 550px) {
   .modal {
     display: block;
     width: 728px;
     max-width: 100%;
-    min-height: 400px;
     height: 100%;
     position: fixed;
     z-index: 100;
@@ -642,6 +683,14 @@ em {
     transition: top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
     transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out;
     transition: transform 0.2s ease-out, top 0.2s ease-out, font-size 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  }
+
+  .form__inputErrorIcon {
+    right: -7px;
+  }
+
+  .form__inputSuccessIcon {
+    right: -7px;
   }
 }
 
