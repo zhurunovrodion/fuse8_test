@@ -215,6 +215,28 @@ class Validator{
 					   		console.log('2');
 					   	break;
 
+					   		case 'checked': 
+					  		if(!$inputField.is(':checked')){
+					  			 if($successIcon.is('.m--inputSuccessIcon-isShowned')){
+					  			   		$successIcon.removeClass('animated fadeIn m--inputSuccessIcon-isShowned');
+					  			   } 
+						           $errorIcon.addClass('animated fadeIn m--inputErrorIcon-isShowned');
+						           $errorMessage.html('Must be checked');
+						           $errorMessage.addClass('animated fadeIn m--inputErrorMessage-isShowned');
+						           fieldErrors++;
+						           errorsArray++;
+					  		}else{
+						     	if($errorIcon.is('.m--inputErrorIcon-isShowned')){
+						     		 $errorIcon.removeClass('animated fadeIn m--inputErrorIcon-isShowned');
+						     		 $errorMessage.removeClass('animated fadeIn m--inputErrorMessage-isShowned');
+						     	}
+						     	$successIcon.addClass('animated fadeIn m--inputSuccessIcon-isShowned');
+						     	
+						     }
+					   		console.log('проверка чекбокса');
+					   		console.log('2');
+					   	break;
+
 					   
 
 					

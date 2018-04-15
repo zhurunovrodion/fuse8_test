@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Modal Form</title>
    
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet"> 
+   <!--   <link href="build/css/c/style.css" type="text/css" rel="stylesheet"> -->
     <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="js/libs/device.js"></script>
     
@@ -62,7 +63,7 @@
                                     </label>
                                     
                                 </div>
-                                 <div class="form__inputErrorMessage"><p>The Name field is required</p></div>
+                                 <div class="form__inputErrorMessage"></div>
                                   <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
                                    <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
                                    <div class="form__inputDownArrow"><img src="images/icon-arrow-down.png"></div>
@@ -80,7 +81,7 @@
                                     </label>
                                     
                                 </div>
-                                 <div class="form__inputErrorMessage"><p>The Name field is required</p></div>
+                                 <div class="form__inputErrorMessage"></div>
                                   <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
                                    <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
                                      <div class="form__inputDownArrow"><img src="images/icon-arrow-down.png"></div>
@@ -95,7 +96,7 @@
                                     </label>
                                     
                                 </div>
-                                 <div class="form__inputErrorMessage"><p>The Name field is required</p></div>
+                                 <div class="form__inputErrorMessage"></div>
                                   <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
                                    <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
                                      <div class="form__inputDownArrow"><img src="images/icon-arrow-down.png"></div>
@@ -110,7 +111,7 @@
                                     </label>
                                     
                                 </div>
-                                 <div class="form__inputErrorMessage"><p>The Name field is required</p></div>
+                                 <div class="form__inputErrorMessage"></div>
                                   <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
                                    <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
                             </div>
@@ -123,7 +124,7 @@
                                         </label>
                                        
                                     </div>
-                                    <div class="form__inputErrorMessage"><p>The Name field is required</p></div>
+                                    <div class="form__inputErrorMessage"></div>
                                     <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
                                     <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
                             </div>
@@ -140,7 +141,7 @@
                                         <abbr title="required">*</abbr>
                                     </label>
                                 </div>
-                                 <div class="form__inputErrorMessage"><p>The Name field is required</p></div>
+                                 <div class="form__inputErrorMessage"></div>
                                  <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
                                  <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
                             </div>
@@ -151,14 +152,18 @@
                             
                             
                        
-                   
-                    <div class="formBlock__compliance js--validateElement">
+                <div class="form__inputElementWrapper js--labelFocusSlide js--validateElement">
+                    <div class="formBlock__compliance ">
                         <label class="defaultCheckbox m--defaultCheckbox-withPadding">
-                            <input class="checkbox" type="checkbox" name="checkbox-test" required>
-                            <span class="checkbox-custom"></span>
+                            <input class="checkbox form__inputField" type="checkbox" name="compliance" data-validate="checked">
+                            <span class="checkboxCustom"></span>
                             <span class="label">I would like to receive email updates from the University</span>
                         </label>
                     </div>
+                      <div class="form__inputErrorMessage m--form__inputErrorMessage-forChecbox"></div>
+                      <div class="form__inputErrorIcon"><img src="images/icon-invalid.png"></div>
+                      <div class="form__inputSuccessIcon"><img src="images/icon-valid.png"></div>
+                 </div>
                     <div class="formBlock__submitButton js--validateSubmitButton">
                         <div class="defaultButton m--defaultButton-withMargin">
                             Make A Booking

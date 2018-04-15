@@ -96,6 +96,38 @@ gulp.task('build-js',  function(){
             }
             )
         )
-         .pipe(sourcemaps.write(jsMapOutPath, jsSourcemapsOptions))
+        .pipe(sourcemaps.write(jsMapOutPath, jsSourcemapsOptions))
         .pipe(gulp.dest(jsOutPath));
 });
+
+// ---------------- CSS -------------------------------------------------
+
+var cssPath = 'css/';                               // Директория, где располагаются CSS-файлы
+var cssOutFile = 'style.css';                         // Название выходного файла css
+var cssOutPath = 'build/css/c/';             // папка со склеенным и уменьшенным css. Файл имеет имя cssOutFile
+var cssMapOutPath = 'map'; // Директория с map-файлами для собранного css
+
+var cssSourcemapsOptions = { sourceMappingURLPrefix: '/css' }; // Опции для настройка sourceMaps
+
+// ---------------- LESS -------------------------------------------------
+
+var lessPath = path.join(cssPath, 'less');        // Папка с LESS файлами
+var mainLess = path.join(lessPath, 'style.less'); // Имя главного LESS файла проекта
+
+gulp.task('build-css-with-less', function(){
+   gulp.src('less/style.less')
+        .pipe(sourcemaps.init())
+        .pipe(less())
+		.pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gcmq())
+        .pipe(cleanCSS())
+        .pipe(rename(cssOutFile))
+        .pipe(sourcemaps.write(cssMapOutPath, cssSourcemapsOptions))
+        .pipe(gulp.dest(cssOutPath));
+});
+
+
+

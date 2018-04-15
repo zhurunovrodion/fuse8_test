@@ -4570,8 +4570,8 @@ body {
   z-index: 100;
   left: 50%;
   top: 20px;
-  -webkit-transform: translate(-50%, 4%);
-  transform: translate(-50%, 4%);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   display: none;
 }
 
@@ -4841,6 +4841,10 @@ body {
   display: block;
 }
 
+.form__inputErrorMessage.m--form__inputErrorMessage-forChecbox {
+  bottom: 7px;
+}
+
 .form__inputErrorIcon {
   display: none;
   position: absolute;
@@ -4968,14 +4972,7 @@ body {
   display: none;
 }
 
-.checkbox-custom {
-  position: relative;
-  width: 8px;
-  height: 8px;
-  border: 2px solid #666666;
-}
-
-.checkbox-custom {
+.checkboxCustom {
   display: inline-block;
   vertical-align: middle;
   color: #666666;
@@ -4983,8 +4980,11 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  position: relative;
   text-indent: 10px;
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #666666;
 }
 
 .label {
@@ -4999,7 +4999,7 @@ body {
   text-indent: 15px;
 }
 
-.checkbox:checked + .checkbox-custom::before {
+.checkbox:checked + .checkboxCustom::before {
   content: "";
   display: block;
   position: absolute;
