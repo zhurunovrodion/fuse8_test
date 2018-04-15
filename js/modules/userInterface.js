@@ -10,7 +10,7 @@ class UI{
 	               let inputWrapper = this;
 	               let $inputField = $('.form__inputField', inputWrapper);
 	               let $inputLabel = $('.form__inputLabel', inputWrapper);
-	               console.log($inputField);
+	              
 
 	              	$inputField.on('ifEmpty', function(){
 							
@@ -45,10 +45,33 @@ class UI{
 						     if(!$.trim(this.value).length) { 
 						            $inputLabel.removeClass('m--form__inputLabel-slideUp');
 						           
-						           console.log(!$.trim(this.value).length);
+						          
 						     }
 					});
 	     });
+	}
+
+	inputDatepickerInit(inputWithDatepicker){
+			$.fn.datepicker.language['eng'] =  {
+			    days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+			    daysShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+			    daysMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
+			    months: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+			    monthsShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'],
+			    today: 'Today',
+			    clear: 'Clear',
+			    dateFormat: 'dd.mm.yyyy',
+			    timeFormat: 'hh:ii',
+			    firstDay: 1
+			};
+			
+			inputWithDatepicker.datepicker({
+					dateFormat: 'yyyy-mm-dd',
+					language: 'eng'
+				});
+			
+
+			
 	}
 
 

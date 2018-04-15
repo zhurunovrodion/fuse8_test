@@ -812,7 +812,7 @@
             var onShow = this.opts.onShow;
 
             this.setPosition(this.opts.position);
-            this.$datepicker.addClass('active animated zoomIn');
+            this.$datepicker.addClass('active');
             this.visible = true;
 
             if (onShow) {
@@ -824,7 +824,7 @@
             var onHide = this.opts.onHide;
 
             this.$datepicker
-                .removeClass('active animated zoomIn')
+                .removeClass('active')
                 .css({
                     left: '-100000px'
                 });
